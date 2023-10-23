@@ -8,12 +8,14 @@ def contarEdad(edad:int) -> int:
         raise ValueError("No puedes tener edad negativa.")
     for i in range(1, edad+1):
         lista.append(i)
-    return lista
+    return str(lista)
 
-
+def mensajeSalida(lista):
+    return "Años cumplidos: " + str(lista)
 
 
 if __name__ == "__main__":
+    #Entrada
     numeroCorrecto = False
     while not numeroCorrecto:
         try:
@@ -22,6 +24,8 @@ if __name__ == "__main__":
             numeroCorrecto = True
         except ValueError:
             print("Introduce un numero.")
-
-    mensaje = contarEdad(edad)
+    #Proceso
+    lista = contarEdad(edad)
+    mensaje = mensajeSalida(lista)
+    #Salida
     print(mensaje)

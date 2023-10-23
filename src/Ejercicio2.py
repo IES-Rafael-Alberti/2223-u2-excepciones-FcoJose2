@@ -20,7 +20,7 @@ if __name__ == "__main__":
     numeroCorrecto = False
     while not numeroCorrecto:
         try:
-            numero = input("Introduce un numero positivo mayor qur 0: ")
+            numero = input("Introduce un numero positivo mayor que 0: ")
             numero = int(numero)
             numeroCorrecto = True
         except ValueError:
